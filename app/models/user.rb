@@ -5,7 +5,7 @@
 # password_confirmation:string virtual
 
 class User < ApplicationRecord
-  has_secure_password
+  has_secure_password # rails feature that gives us that .authenticate() method
 
   validates :email, presence: true, format: {
     with: /\A[^@\s]+@[^@\s]+\z/,

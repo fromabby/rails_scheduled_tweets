@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   get "sign_up", to: "registrations#new"
   post "sign_up", to: "registrations#create"
 
+  get "sign_in", to: "sessions#new"
+  post "sign_in", to: "sessions#create"
+
   # alternate to root: get "/"
   root to: "main#index"
 end
