@@ -2,7 +2,7 @@
 
 <%= form_with model: Current.user, url: password_path do |form| %>
   <% if form.object.errors.any? %>
-    <%= form.object.full_messages.each do |message| %>
+    <%= form.object.errors.full_messages.each do |message| %>
       <div class="alert alert-danger">
         <div><%= message %></div>
       </div>
