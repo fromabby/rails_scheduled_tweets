@@ -27,9 +27,6 @@ class PasswordResetsController < ApplicationController
 
   rescue ActiveSupport::MessageVerifier::InvalidSignature
     redirect_to sign_in_path, alert: "Your token has expired"
-
-    if @user.present?
-    end
   end
 
   def update

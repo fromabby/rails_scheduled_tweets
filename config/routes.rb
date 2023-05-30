@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   
   delete "logout", to: "sessions#destroy"
 
+  get "/auth/twitter/callback", to: "omniauth_callbacks#twitter"
   # alternate to root: get "/"
   root to: "main#index"
 end
