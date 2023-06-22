@@ -3,7 +3,7 @@
 <div class="flex">
   <%= form_with model: @user, url: sign_up_path do |form| %>
     <% if form.object.errors.any? %>
-      <%= form.object.full_messages.each do |message| %>
+      <%= form.object.errors.full_messages.each do |message| %>
         <div class="alert alert-danger">
           <div><%= message %></div>
         </div>
