@@ -1,6 +1,6 @@
 <h1>Twitter accounts</h1>
 
-<%= link_to "Connect a Twitter account", "/auth/twitter", method: :post, class: "btn btn-primary"  %>
+<%= button_to "Connect a Twitter account", "/auth/twitter", method: :post, class: "btn btn-primary" %>
 
 <% @twitter_accounts.each do |twitter_account| %>
   <div>
