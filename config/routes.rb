@@ -26,6 +26,10 @@ Rails.application.routes.draw do
   
   delete "logout", to: "sessions#destroy"
 
+  resources :twitter_accounts
+  # get "twitter_accounts/:id"
+  # delete "twitter_accounts/:id"
+
   # alternate to root: get "/"
   root to: "main#index"
 end
